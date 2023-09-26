@@ -1,4 +1,27 @@
+// rrd imports
+import { Link, useNavigate, useRouteError } from 'react-router-dom';
+
+// library
+import { HomeIcon, ArrowUturnLeftIcon } from '@heroicons/react/24/solid';
 const Error = () => {
-  return <div>Error</div>;
+  const error = useRouteError();
+  const navigation = useNavigate();
+
+  return (
+    <div className="error">
+      <h1>Uh oh! We have a problem.</h1>
+      <p>{error.message || error.statusText}</p>
+      <div className="flex-md">
+        <button className="btn btn--dark" onClick={() => navigation(-1)}>
+          <ArrowUturnLeftIcon width={20} />
+          <span>Go Back</span>
+        </button>
+        <Link to="/" className="btn btn--dark">
+          <HomeIcon width={20} />
+          <span>Go Home</span>
+        </Link>
+      </div>
+    </div>
+  );
 };
 export default Error;
