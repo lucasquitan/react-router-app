@@ -1,3 +1,8 @@
+// check disable button
+export const waait = () =>
+  new Promise((res) => setTimeout(res, Math.random() * 1500));
+
+//color
 const generateRandomColor = () => {
   const existingBudgetLength = fetchData('budgets')?.length ?? 0;
   return `${existingBudgetLength * 34} 65% 50%`;
