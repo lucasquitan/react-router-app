@@ -14,10 +14,8 @@ const Intro = () => {
         <h1>
           Take control of <span className="accent">Your Money</span>
         </h1>
-        <p>
-          Personal budgeting is the secret for finalcial fredom. Start your
-          jorney today.
-        </p>
+        <p>Personal budgeting is the secret for financial fredom.</p>
+        <p>Start your jorney today.</p>
         <Form method="post">
           <input
             type="text"
